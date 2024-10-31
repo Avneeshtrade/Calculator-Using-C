@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++ build task",
+			"command": "powershell",
+            "args": [
+                "-Command",
+                "gcc -g -Iinclude -o ${fileDirname}\\${fileBasenameNoExtension}.exe (Get-ChildItem -Path 'D:\\projects' -Filter '*.c' -Recurse | Select-Object -ExpandProperty FullName)"
+            ],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: gcc.exe"
+		}
+	]
+}

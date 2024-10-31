@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
-
+*.exe
+include/**/*.exe
+src/**/*.exe
 # Object files
 *.o
 *.ko
